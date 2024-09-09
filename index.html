@@ -76,7 +76,16 @@
     </main>
     
     <footer>
-        <p>Data da atividade: 08/09/2024 | Horário: 15:30 | Nome do aluno: Lucas dos Santos</p>
+        <p>Data da atividade: 08/09/2024 | Horário: <span id="horario-atual"></span> | Nome do aluno: Lucas dos Santos</p>
     </footer>
+    <script>
+        function atualizarHorario() {
+            const agora = new Date();
+            const opcoes = { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit' };
+            document.getElementById('horario-atual').textContent = agora.toLocaleTimeString('pt-BR', opcoes);
+        }
+        atualizarHorario();
+        setInterval(atualizarHorario, 1000);
+    </script>
 </body>
 </html>
