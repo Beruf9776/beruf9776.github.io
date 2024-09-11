@@ -3,89 +3,66 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Redes sociais e saúde mental</title>
+    <title>Acompanhamento de Evolução - João da Terra</title>
     <style>
         body {
             font-family: Arial, sans-serif;
+            line-height: 1.6;
             margin: 0;
             padding: 0;
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
         }
-        header, nav, footer {
-            background-color: #4a90e2;
+        .container {
+            width: 80%;
+            margin: auto;
+            overflow: hidden;
+            padding: 20px;
+        }
+        header {
+            background: #35424a;
             color: white;
-            padding: 1em;
+            padding-top: 30px;
+            min-height: 70px;
+            border-bottom: #e8491d 3px solid;
+        }
+        header h1 {
+            margin: 0;
             text-align: center;
         }
-        main {
-            display: flex;
-            flex: 1;
+        .progress-section {
+            background: #f4f4f4;
+            margin: 20px 0;
+            padding: 20px;
+            border-radius: 5px;
         }
-        section {
-            flex: 2;
-            padding: 1em;
-        }
-        article {
-            margin-top: 1em;
-        }
-        aside {
-            flex: 1;
-            background-color: #f0f0f0;
-            padding: 1em;
-        }
-        img {
-            max-width: 100%;
-            height: auto;
+        @media(max-width: 768px) {
+            .container {
+                width: 95%;
+            }
         }
     </style>
 </head>
 <body>
     <header>
-        <h1>LUCAS DOS SANTOS</h1>
+        <div class="container">
+            <h1>Acompanhamento de Evolução - João da Terra</h1>
+        </div>
     </header>
-    
-    <nav>
-        <a href="#home">Home</a> |
-        <a href="#sobre">Sobre</a> |
-        <a href="#contato">Contato</a>
-    </nav>
-    
-    <main>
-        <section>
-            <h2>Redes sociais e saúde mental: como lidar com a toxicidade virtual?</h2>
-            <p>As redes sociais têm um impacto significativo em nossas vidas, mas também podem afetar negativamente nossa saúde mental. É importante aprender a lidar com a toxicidade virtual para manter um equilíbrio saudável.</p>
-            
-            <article>
-                <img src="img.jpg" alt="Não copie, crie! Plágio é crime federal previsto na Lei 9.610/98">
-                <p>Lembre-se: a criatividade é essencial. Não copie, crie seu próprio conteúdo!</p>
-            </article>
+
+    <div class="container">
+        <section class="progress-section">
+            <h2>Progresso Geral</h2>
+            <p>Aqui será exibido o progresso geral do curso.</p>
         </section>
-        
-        <aside>
-            <h3>Conteúdo Relacionado</h3>
-            <p>Quais os impactos negativos de um ambiente de trabalho tóxico?</p>
-            <ul>
-                <li>Estresse elevado</li>
-                <li>Baixa produtividade</li>
-                <li>Problemas de saúde mental</li>
-                <li>Alta rotatividade de funcionários</li>
-            </ul>
-        </aside>
-    </main>
-    
-    <footer>
-        <p>Data da atividade: 08/09/2024 | Horário: <span id="horario-atual"></span> | Nome do aluno: Lucas dos Santos</p>
-    </footer>
-    <script>
-        function atualizarHorario() {
-            const agora = new Date();
-            const opcoes = { timeZone: 'America/Sao_Paulo', hour: '2-digit', minute: '2-digit' };
-            document.getElementById('horario-atual').textContent = agora.toLocaleTimeString('pt-BR', opcoes);
-        }
-        atualizarHorario();
-        setInterval(atualizarHorario, 1000);
-    </script>
+
+        <section class="progress-section">
+            <h2>Módulos Concluídos</h2>
+            <p>Lista de módulos concluídos será exibida aqui.</p>
+        </section>
+
+        <section class="progress-section">
+            <h2>Próximos Passos</h2>
+            <p>Informações sobre os próximos módulos e atividades serão mostradas aqui.</p>
+        </section>
+    </div>
 </body>
 </html>
