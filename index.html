@@ -3,63 +3,91 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Clima no Brasil</title>
+    <title>Copa do Mundo</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
+            line-height: 1.6;
             margin: 0;
-            padding: 20px;
+            padding: 0;
+            background-color: rgb(240, 240, 240);
         }
-        .container {
-            background-color: white;
-            border-radius: 15px;
-            padding: 20px;
-            box-shadow: 0 0 10px rgba(0,0,0,0.1);
-        }
-        h1 {
-            color: #0077be;
+        header {
+            background-color: rgb(0, 70, 140);
+            color: rgb(255, 255, 255);
             text-align: center;
-            text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+            padding: 1rem;
         }
-        h2 {
-            color: #0077be;
-            font-weight: bold;
+        main {
+            padding: 2rem;
         }
-        .content {
-            column-count: 2;
-            column-gap: 40px;
+        .historia {
+            margin-bottom: 2rem;
         }
-        img {
-            max-width: 100%;
-            height: auto;
-            margin-bottom: 20px;
+        .paragrafo1 {
+            color: rgb(0, 100, 0);
+        }
+        .paragrafo2 {
+            color: rgb(150, 0, 0);
+        }
+        .paragrafo3 {
+            color: rgb(0, 0, 150);
+        }
+        .galeria {
+            display: flex;
+            justify-content: space-around;
+            flex-wrap: wrap;
+        }
+        .galeria img {
+            width: 300px;
+            height: 200px;
+            object-fit: cover;
+            margin: 1rem;
+        }
+        footer {
+            background-color: rgb(0, 70, 140);
+            color: rgb(255, 255, 255);
+            text-align: center;
+            padding: 1rem;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
         }
     </style>
 </head>
 <body>
-    <div class="container">
-        <h1>Lucas dos Santos</h1>
-        <div class="content">
-            <h2>Sobre o Clima no Brasil</h2>
-            <p>O Brasil, devido à sua vasta extensão territorial, apresenta uma grande diversidade climática. O país abrange diferentes zonas climáticas, desde o equatorial úmido na região amazônica até o subtropical no sul.</p>
-            
-            <h2>Clima Equatorial</h2>
-            <p>Predominante na região Norte, o clima equatorial é caracterizado por altas temperaturas e elevada umidade durante todo o ano. As chuvas são frequentes e bem distribuídas.</p>
-            
-            <h2>Clima Tropical</h2>
-            <p>Abrange grande parte do território brasileiro, com verões quentes e chuvosos e invernos mais secos. As temperaturas médias são elevadas ao longo do ano.</p>
-            
-            <h2>Clima Semiárido</h2>
-            <p>Típico do Nordeste brasileiro, apresenta altas temperaturas e baixa umidade. As chuvas são escassas e mal distribuídas ao longo do ano.</p>
-            
-            <h2>Clima Subtropical</h2>
-            <p>Presente na região Sul, caracteriza-se por verões quentes e invernos frios, com possibilidade de geadas. As chuvas são bem distribuídas ao longo do ano.</p>
-            
-            <h2>Influências Climáticas</h2>
-            <p>O clima brasileiro é influenciado por diversos fatores, como a localização geográfica, relevo, massas de ar e correntes marítimas. Essa diversidade climática contribui para a rica biodiversidade do país.</p>
-        </div>
-        <img src="map.png" alt="Mapa climático do Brasil">
-    </div>
+    <header>
+        <h1>LUCAS DOS SANTOS</h1>
+    </header>
+    
+    <main>
+        <section class="historia">
+            <h2>História das Copas do Mundo</h2>
+            <p class="paragrafo1">A Copa do Mundo FIFA teve sua primeira edição em 1930, no Uruguai. Desde então, tornou-se o maior evento esportivo do planeta, reunindo as melhores seleções nacionais de futebol a cada quatro anos. O Brasil é o país mais vitorioso, com cinco títulos conquistados.</p>
+            <p class="paragrafo2">Ao longo das décadas, a Copa do Mundo testemunhou momentos históricos e emocionantes. Grandes jogadores como Pelé, Maradona, Zidane e Ronaldo deixaram suas marcas no torneio. A competição também evoluiu, aumentando o número de equipes participantes e expandindo sua influência global.</p>
+            <p class="paragrafo3">Além do aspecto esportivo, a Copa do Mundo tem um impacto significativo na economia e na cultura dos países-sede. O evento promove o turismo, gera empregos e deixa um legado de infraestrutura. A paixão pelo futebol une pessoas de diferentes nacionalidades, fazendo da Copa um verdadeiro fenômeno mundial.</p>
+        </section>
+        
+        <section class="galeria">
+            <img src="copa_1930.jpg" alt="Primeira Copa do Mundo em 1930">
+            <img src="pele_copa.jpeg" alt="Pelé na Copa do Mundo">
+            <img src="brasil_penta.jpg" alt="Brasil Pentacampeão">
+        </section>
+    </main>
+
+    <footer>
+        <p>Mauá-SP, <span id="data-hora"></span></p>
+    </footer>
+
+    <script>
+        function atualizarDataHora() {
+            const agora = new Date();
+            const dataFormatada = agora.toLocaleDateString('pt-BR');
+            const horaFormatada = agora.toLocaleTimeString('pt-BR');
+            document.getElementById('data-hora').textContent = `${dataFormatada}, ${horaFormatada}`;
+        }
+        atualizarDataHora();
+        setInterval(atualizarDataHora, 1000);
+    </script>
 </body>
 </html>
